@@ -1,0 +1,27 @@
+STREAMLIT CLOUD IMPORT FIX
+
+Required GitHub layout:
+
+app.py
+requirements.txt
+backend/
+    __init__.py
+    auth.py
+    config.py
+    database.py
+    openai_service.py
+    security.py
+    usage.py
+
+Keep the backend folder at the same level as app.py.
+Do not rename backend to Backend because Streamlit Cloud runs on Linux,
+where file and folder names are case-sensitive.
+
+After uploading the corrected files:
+1. Commit the changes to GitHub.
+2. Open the Streamlit app.
+3. Select Manage app.
+4. Reboot the app.
+
+If the log shows a different missing module, such as openai or psycopg,
+check that requirements.txt is at the repository root.
